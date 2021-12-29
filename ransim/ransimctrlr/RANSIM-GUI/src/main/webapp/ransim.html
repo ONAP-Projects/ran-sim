@@ -71,6 +71,32 @@
 		    margin: 4px 2px;
 		    cursor: pointer;
 		}
+	.header {
+		    font-size: 0;
+		    height: 65px;
+	            width: 2594px;
+		    background: -webkit-linear-gradient(left, rgb(11, 12, 17) 0%, rgb(40, 48, 62) 40%);
+		    background: linear-gradient(to right, rgb(11, 12, 17) 0%, rgb(40, 48, 62) 40%);
+	}
+	.container-fluid {
+		    width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+	}
+	.header .logo {
+		    padding: 12px 0;
+	            width: 92.47px;
+		    display: inline-block;
+	            vertical-align: middle;
+	}
+	.btn:hover{
+	            background-color: white;
+		    color:#1b47c5;
+		    cursor: pointer;
+	}
+
     </style>
     <script>
         var childWindow;
@@ -114,7 +140,7 @@
             console.log("topoHeight " + topoHeight);
             var context = myCanvas.getContext("2d");
             context.clearRect(0, 0, topoWidth, topoHeight);
-            context.fillStyle = "#FFFFDF";
+            context.fillStyle = "#CDEEFB";
             context.fillRect(0, 0, topoWidth, topoHeight);
             var RADIUS = 11;
             var noProblemColor = "#32CD32"; //GREEN
@@ -677,11 +703,21 @@
 </head>
 
 <body onLoad="init();" style="margin: 0px">
+	<header class="header">
+	     <div class="container-fluid">
+	          <div class="logo">
+	               <a title="Opensource RAN Simulator">
+	               <img alt="Opensource RAN Simulator" src="images/logo.png" style="width: 100px">
+	               </a>
+	          </div>
+	          <div class="clearfix"></div>
+	     </div>
+         </header>
     <div class="hide" id="rmenu"></div>
     <div class="hide" id="modified"></div>
-    <div id="ransim" class="absolute">
-    PNF/Cell name: <input type="text" id="myText" size="9" value="ncserver00">	
-		<button onclick="searchCell()">Search</button>
+    <div id="ransim" class="absolute" style="height: 40px;padding-top: 7px;padding-left: 1rem;">
+	    <b>PNF/Cell name:</b> <input type="text" id="myText" size="9" value="ncserver00" style="height: 25px; background-color: gainsboro;text-align: center">	
+		<button onclick="searchCell()" class="btn" style="height: 30px;background-color: #1B47C5;color: white; border-radius: 10px;width: 7rem;border: none;box-shadow: 0 2px 2px #888888;margin-left: 1rem;">Search</button>
 		<br>
 		
 	</div>

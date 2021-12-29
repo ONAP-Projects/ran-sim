@@ -50,7 +50,7 @@ language governing permissions and limitations under the License.
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>${jetty.version}</version>
 			</plugin>
-            <plugin>
+			<!--     <plugin>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <executions>
                     <execution>
@@ -61,7 +61,7 @@ language governing permissions and limitations under the License.
                         <phase>process-sources</phase>
                         <configuration>
                             <configLocation>onap-checkstyle/onap-java-style.xml</configLocation> 
-                            <!-- <sourceDirectory> is needed so that checkstyle ignores the generated sources directory -->
+                            <sourceDirectory> is needed so that checkstyle ignores the generated sources directory
                             <sourceDirectories>${project.build.sourceDirectory}</sourceDirectories> 
                             <includeResources>true</includeResources>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -106,7 +106,7 @@ language governing permissions and limitations under the License.
                             </pluginExecutions>
                         </lifecycleMappingMetadata>
                     </configuration>
-                </plugin>
+		</plugin> -->
 		</plugins>
 	</build>
 	<dependencies>
