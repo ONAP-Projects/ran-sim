@@ -3,7 +3,7 @@ networks:
   default:
     driver: bridge
     driver_opts:
-      com.docker.network.driver.mtu: ${MTU}
+      com.docker.network.driver.mtu: 1400
 services:
    mariadb:
       image: mariadb:10.0.34
@@ -20,8 +20,8 @@ services:
       image: onap/ransim-demo:latest
       container_name: ransim
       environment:
-       - SDNR_IP=192.168.100.21
-       - SDNR_PORT=30202
+       - SDNR_IP=172.30.162.100
+       - SDNR_PORT=30197
        - SDNR_USER=admin
        - SDNR_PASSWORD=Kp8bJ4SXszM0WXlhak3eHlcse2gAw84vaoGGmJvUy2U
       hostname: ransimsvr
